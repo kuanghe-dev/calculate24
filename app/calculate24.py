@@ -40,12 +40,13 @@ class Calculate24:
         self.cards = cards
 
     def run(self):
+        res = []
         for nums in set(permutations(self.cards)):
             resultDict = dp(nums,  0, 3)
             for result in resultDict:
                 if abs(result - 24) < Calculate24.EPS:
-                    return resultDict[result]
-        return []
+                    res.extend(resultDict[result])
+        return res
 
 if __name__ == '__main__':
     inputs = [
@@ -57,6 +58,7 @@ if __name__ == '__main__':
         [9, 7, 8, 5],
         [9, 9, 9, 9],
         [5, 5, 5, 5],
+        [6, 6, 5, 2],
     ]
 
     for input in inputs:
