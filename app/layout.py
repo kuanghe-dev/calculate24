@@ -1,33 +1,8 @@
-from dash import dcc, html
+from dash import html, dcc
 import dash_bootstrap_components as dbc
-
-# def gen_inline_blocks(*args):
-#     return html.Div(
-#         [
-#             html.Div([arg], style={'display': 'inline-block'}) for arg in args
-#         ]
-#     )
-
-# def add_tooltip(obj, tooltip, id):
-#     return gen_inline_blocks(
-#         obj,
-#         html.Span(
-#             u"\U0001F6C8",
-#             id=id,
-#             style={"cursor": "pointer", "fontSize": "18px"},
-#         ),
-#         dbc.Tooltip(
-#             tooltip,
-#             target=id,
-#         ),
-#     )
 
 calculate24_card = dbc.Card(
     [
-        # dbc.CardHeader(
-        #     "Calculate 24",
-        #     style={"fontWeight": "bold"},
-        # ),
         dbc.CardBody(
             [
                 html.P(["Please input four integers between 1 and 9:"],
@@ -83,7 +58,7 @@ calculate24_card = dbc.Card(
             className="pb-2",
         )
     ],
-    className="mb-3",
+    className="mb-4 pb-2",
     color="secondary",
     outline=True,
 )
@@ -94,11 +69,11 @@ acknowledgments_card = dbc.Card(
             dcc.Markdown('''\
 #### Source Code
 
-You can find the source code [here](http://github.com/). TODO
+You can find the source code [here](https://github.com/kuanghe-dev/calculate24.git).
 
 #### Acknowledgments
 
-This website's icon is made by [iconmas](https://www.flaticon.com/authors/iconmas)
+The web app's icon is made by [iconmas](https://www.flaticon.com/authors/iconmas)
 from [Flaticon](https://www.flaticon.com).
 ''')
         ], className="mb-1 pb-0"),
@@ -112,7 +87,7 @@ layout = dbc.Container(
     [
         html.Div(
             [
-                html.H1('24 Game'),
+                html.H1('24 Puzzle'),
                 html.P('Find ways to manipulate four integers to get 24.',
                        className='lead')
             ],
