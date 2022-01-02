@@ -11,7 +11,7 @@ calculate24_card = dbc.Card(
                     dbc.Col(
                         html.Div(
                             [
-                                dbc.Input(id="n1-input", type="number", value=6),
+                                dbc.Input(id="n1-input", type="number", value=5),
                                 dbc.FormFeedback("Need a number between 1 and 9.", type="invalid"),
                             ],
                         ),
@@ -20,7 +20,7 @@ calculate24_card = dbc.Card(
                     dbc.Col(
                         html.Div(
                             [
-                                dbc.Input(id="n2-input", type="number", value=6),
+                                dbc.Input(id="n2-input", type="number", value=5),
                                 dbc.FormFeedback("Need a number between 1 and 9.", type="invalid"),
                             ],
                         ),
@@ -29,7 +29,7 @@ calculate24_card = dbc.Card(
                     dbc.Col(
                         html.Div(
                             [
-                                dbc.Input(id="n3-input", type="number", value=6),
+                                dbc.Input(id="n3-input", type="number", value=5),
                                 dbc.FormFeedback("Need a number between 1 and 9.", type="invalid"),
                             ],
                         ),
@@ -38,7 +38,7 @@ calculate24_card = dbc.Card(
                     dbc.Col(
                         html.Div(
                             [
-                                dbc.Input(id="n4-input", type="number", value=6),
+                                dbc.Input(id="n4-input", type="number", value=1),
                                 dbc.FormFeedback("Need a number between 1 and 9.", type="invalid"),
                             ],
                         ),
@@ -69,7 +69,7 @@ acknowledgments_card = dbc.Card(
             dcc.Markdown('''\
 #### Source Code
 
-You can find the source code [here](https://github.com/kuanghe-dev/calculate24.git).
+You can find the source code on [GitHub](https://github.com/kuanghe-dev/calculate24.git).
 
 #### Acknowledgments
 

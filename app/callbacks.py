@@ -44,7 +44,6 @@ def assign_callbacks(app):
         )
         def check_param_validity(value, id):
             valid = validate_param(value, INPUT_PARAM_RANGE[id])
-            print('value=', value, 'id=', id, 'return: ', not valid)
             return not valid
 
     @app.callback(
@@ -66,9 +65,11 @@ def assign_callbacks(app):
 
         results = Calculate24(inputs).run()
         if results:
-            text = '\n'.join(res for res in results)
+            text = '\n'.join(results)
         else:
-            text = '    No results found.'
+            #inputs = ', '.join(inputs)
+            #text = f'No results found for {inputs}.'
+            text = f'No results found for {n1}, {n2}, {n3}, and {n4}.'
 
         markdown = f"""\
 ```cpp
