@@ -67,8 +67,6 @@ def assign_callbacks(app):
         if results:
             text = '\n'.join(results)
         else:
-            #inputs = ', '.join(inputs)
-            #text = f'No results found for {inputs}.'
             text = f'No results found for {n1}, {n2}, {n3}, and {n4}.'
 
         markdown = f"""\
