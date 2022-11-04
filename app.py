@@ -9,7 +9,6 @@ app = create_app()
 app.layout = layout
 assign_callbacks(app)
 
-if __name__ == '__main__':
-    debug = bool(os.environ.get('DEBUG'))
-    app.run_server(debug=debug, port=8000)
-
+if __name__ == "__main__":
+    debug = bool(os.environ.get("DEBUG"))
+    app.run_server(debug=debug, port="8000")
